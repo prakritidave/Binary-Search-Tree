@@ -14,6 +14,7 @@ struct node{
 	
 };
 
+//insert node in a BST
 node* insert(node *root, int k){
 
 	if(root == NULL){
@@ -38,7 +39,7 @@ node* insert(node *root, int k){
 	return root;
 };
 
-
+//find predecessor node of root
 node* findPred(node *root){
 
     if(root->right == NULL){
@@ -49,6 +50,7 @@ node* findPred(node *root){
 	}
 }
 
+//height of the BST
 int height(node *root){
 
 	if(root == NULL)return 0;
@@ -64,6 +66,7 @@ int height(node *root){
 
 }
 
+//delete node from BST with given value k
 node* deleteNode(node  *root, int k){
 
 	if(root==NULL){
@@ -102,6 +105,7 @@ node* deleteNode(node  *root, int k){
 
 }
 
+//search for a node with value k in BST 
 void search(node *root, int k){
 
 	if(root==NULL){
@@ -122,6 +126,7 @@ void search(node *root, int k){
 	}
 }
 
+//find's kth smallest element in BST using inorder traversal
 void findKthSmallestInorder(node *root, int k){
 	static int count=1;
 
@@ -159,6 +164,7 @@ void findKthLargestInorder(node *root, int k){
 	
 }
 
+//display all paths from root with the given sum
 void sumFromRoot(node *root, vector<int>path, int sum){
 
 	if(root == NULL)return;		
@@ -181,6 +187,7 @@ void sumFromRoot(node *root, vector<int>path, int sum){
 	
 }
 
+//print all paths from any node to any node in BST that sum upto k
 void printAllKSumPaths(node *root, vector<int>&path, int k){
 
 	if(root == NULL)return;
@@ -208,6 +215,7 @@ void printAllKSumPaths(node *root, vector<int>&path, int k){
 
 }
 
+//inorder traversal of BST
 void inorder(node *root){
 
 	if(root==NULL)return;
